@@ -1,0 +1,80 @@
+header {
+    height: 100vh;
+    padding-top: 7px;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    /* Remove padding to make the image fully circular */
+    margin-top: 4rem;
+    border-radius: 50%; /* Make the container circular */
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}
